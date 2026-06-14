@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-ink;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  ::-webkit-scrollbar        { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track  { background: transparent; }
+  ::-webkit-scrollbar-thumb  { @apply bg-ink-faint rounded-full; }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface-card border border-surface-border rounded-xl p-5;
+  }
+
+  .stat-number {
+    @apply font-mono text-3xl font-medium text-ink tabular-nums;
+  }
+
+  .label {
+    @apply text-xs text-ink-muted uppercase tracking-widest;
+  }
+
+  .tab {
+    @apply px-4 py-1.5 rounded-lg text-sm font-medium transition-colors cursor-pointer;
+  }
+
+  .tab-active {
+    @apply bg-brand text-white;
+  }
+
+  .tab-inactive {
+    @apply text-ink-muted hover:text-ink;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium font-mono;
+  }
+}

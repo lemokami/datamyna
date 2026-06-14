@@ -1,5 +1,9 @@
 # DataMyna
 
+<p align="center">
+<img src="./assets/myna.png" alt="Description" width="200">
+</p>
+
 A self-hostable, open-source product analytics tool. Drop in a script tag, get a dashboard.
 
 ## Quick start
@@ -29,8 +33,8 @@ docker compose exec backend python -c "from aggregator import backfill; backfill
 
 <!-- Programmatic event -->
 <script>
-  datamyna.track('upgrade_click', { plan: 'pro' })
-  datamyna.identify('user_123')   // call after login
+  datamyna.track("upgrade_click", { plan: "pro" });
+  datamyna.identify("user_123"); // call after login
 </script>
 ```
 
@@ -61,17 +65,17 @@ User journey (drill-in):
 
 ## Endpoints
 
-| Method | Path | Description |
-|--------|------|-------------|
-| POST | `/ingest` | Receive event batches from tracker.js |
-| GET | `/dau?days=30` | Daily unique users |
-| GET | `/wau?weeks=12` | Weekly unique users |
-| GET | `/mau?months=6` | Monthly unique users |
-| GET | `/top-pages?days=7` | Top 10 pages by views |
-| GET | `/events/timeline?event_name=signup_click` | Named event over time |
-| GET | `/stats/today` | Today's KPI snapshot |
-| GET | `/sessions?days=7&user_id=u_001` | Session list |
-| GET | `/sessions/:id/events` | Full event sequence for one session |
+| Method | Path                                       | Description                           |
+| ------ | ------------------------------------------ | ------------------------------------- |
+| POST   | `/ingest`                                  | Receive event batches from tracker.js |
+| GET    | `/dau?days=30`                             | Daily unique users                    |
+| GET    | `/wau?weeks=12`                            | Weekly unique users                   |
+| GET    | `/mau?months=6`                            | Monthly unique users                  |
+| GET    | `/top-pages?days=7`                        | Top 10 pages by views                 |
+| GET    | `/events/timeline?event_name=signup_click` | Named event over time                 |
+| GET    | `/stats/today`                             | Today's KPI snapshot                  |
+| GET    | `/sessions?days=7&user_id=u_001`           | Session list                          |
+| GET    | `/sessions/:id/events`                     | Full event sequence for one session   |
 
 ---
 

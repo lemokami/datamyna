@@ -1,8 +1,6 @@
 # DataMyna
 
-<p align="center">
 <img src="./assets/myna.png" alt="Description" width="200">
-</p>
 
 A self-hostable, open-source product analytics tool. Drop in a script tag, get a dashboard.
 

@@ -4,6 +4,10 @@
 
 A self-hostable, open-source product analytics tool. Drop in a script tag, get a dashboard.
 
+## Screenshots
+<img src="./assets/dashboard.jpeg" alt="Dashboard screenshot" width="400">
+
+
 ## Quick start
 
 ```bash
